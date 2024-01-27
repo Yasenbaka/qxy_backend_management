@@ -1,0 +1,16 @@
+#login-banner {
+    background-color: #b0bfda;
+    background-image: linear-gradient(45deg, #b0bfda, #B0DAB1);
+    height: 400px;
+}
+#milestone-banner{
+    background-color: #b0dab1;
+    background-image: linear-gradient(45deg, #B0DAB1, #dab0b0);
+    height: 400px;
+}
+#recruit-banner{
+    margin-right: 0;
+    background-color: #dab0b0;
+    background-image: linear-gradient(45deg, #dab0b0, #b0bfda);
+    height: 400px;
+}

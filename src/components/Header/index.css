@@ -1,0 +1,41 @@
+.main-header{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #b1d2dc;
+    width: 100%;
+    height: 70px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+.main-header-logo{
+    left: 5%;
+    height: 90%;
+    margin: 0 20px 0 50px;
+
+}
+.main-header-menu-box{
+    position: absolute;
+    top: 0;
+    /*top: 50%;*/
+    transform: translateY(-50%); /* 向上移动自身高度的一半 */
+    height: 100%;
+    right: 5%;
+}
+.main-header-menu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.main-header-menu-item{
+    float: left;
+    list-style: none;
+}
+.main-header-menu-item a{
+    font-size: 30px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}

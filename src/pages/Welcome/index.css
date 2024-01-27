@@ -1,0 +1,38 @@
+.main-school-logo-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    width: 100%;
+    z-index: -1;
+}
+.welcome-container-box{
+    text-align: center;
+    color: #afced8;
+}
+.welcome-select-banner-menu{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 100px 0;
+}
+.welcome-container-box ul li{
+    list-style: none;
+}
+.welcome-select-banner-menu a{
+    color: #fff;
+    text-decoration: none;
+    font: 30px bolder serif;
+}
+.welcome-select-banner-menu:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.welcome-select-banner-menu li{
+    float: left;
+    width: 350px;
+    margin-right: 5%;
+}
+#select-banner-last{
+    margin-right: 0;
+}
