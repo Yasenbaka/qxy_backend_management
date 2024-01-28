@@ -6,6 +6,8 @@ import Interface from "../pages/Management/Interface";
 import Commodity from "../pages/Management/Commodity";
 import Indent from "../pages/Management/Indent";
 import User from "../pages/Management/User";
+import Home from "../pages/Management/Interface/Home";
+import CommodityList from "../pages/Management/Interface/CommodityList";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
@@ -31,7 +33,17 @@ export default [
         children: [
             {
                 path: "interface",
-                element: <Interface/>
+                element: <Interface/>,
+                children: [
+                    {
+                        path: "home",
+                        element: <Home/>
+                    },
+                    {
+                        path: "commodity_list",
+                        element: <CommodityList/>
+                    }
+                ]
             },
             {
                 path: "commodity",
