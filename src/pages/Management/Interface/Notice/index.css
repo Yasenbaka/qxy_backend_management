@@ -1,0 +1,18 @@
+
+.interface-notice-box{
+    box-shadow: #00000050 0 0 5px;
+    height: auto;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+}
+#interface-notice-origin-content{
+    padding: 10px;
+    box-shadow: #d8afaf 0 0 10px;
+    background-color: #b0d0da;
+    color: #756060;
+}
+#interface-notice-new-input{
+    width: 80%;
+    height: 30px;
+}

@@ -1,0 +1,72 @@
+/*.interface-box{*/
+/*    display: flex;*/
+/*    box-shadow: #00000050 0 0 10px;*/
+/*    width: 90%;*/
+/*    height: 100vh;*/
+/*    padding: 20px;*/
+/*    margin: 0 auto 20px auto;*/
+/*    transition: box-shadow 1s ease;*/
+/*}*/
+/*.interface-box:hover{*/
+/*    box-shadow: #00000080 0 0 15px;*/
+/*}*/
+/*.interface-side-menu-box{*/
+/*    position: absolute;*/
+/*    width: 11%;*/
+/*    height: 20rem;*/
+/*    box-shadow: #00000050 0 0 5px;*/
+/*}*/
+/*.interface-side-menu, .interface-side-menu li{*/
+/*    list-style: none;*/
+/*}*/
+/*.interface-side-menu li a{*/
+/*    text-decoration: none;*/
+/*    color: #6e8186;*/
+/*    font: 20px bold sans-serif;*/
+/*    transition: .5s ease;*/
+/*}*/
+/*.interface-side-menu li{*/
+/*    box-shadow: #00000050 0 0 5px;*/
+/*    width: 100px;*/
+/*    height: 2.5rem;*/
+/*    margin-bottom: 20px;*/
+/*    text-align: center;*/
+/*    transition: .5s ease;*/
+/*}*/
+/*.interface-side-menu li:hover{*/
+/*    background-color: #b1d2dc;*/
+/*    box-shadow: rgba(255, 207, 207, 0.87) 0 0 10px;*/
+/*}*/
+/*.interface-side-menu li a:hover{*/
+/*    color: white;*/
+/*}*/
+.interface-box{
+    width: 95%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    box-shadow: #00000050 0 0 5px;
+}
+.interface-side-menu-box{
+    box-shadow: #00000050 0 0 5px;
+    width: 95%;
+    height: 3rem;
+    margin: 0 auto 20px auto;
+}
+.interface-side-menu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.interface-side-menu, .interface-side-menu li{
+    list-style: none;
+}
+.interface-side-menu li{
+    float: left;
+    margin-right: 10px;
+}
+.interface-side-menu li a{
+    color: #82989f;
+    font-size: 20px;
+    text-decoration: none;
+}

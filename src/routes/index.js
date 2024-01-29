@@ -7,10 +7,11 @@ import Commodity from "../pages/Management/Commodity";
 import Indent from "../pages/Management/Indent";
 import User from "../pages/Management/User";
 import Home from "../pages/Management/Interface/Home";
-import CommodityList from "../pages/Management/Interface/CommodityList";
+import {Navigate} from "react-router-dom";
+import Notice from "../pages/Management/Interface/Notice";
+import NewCommodity from "../pages/Management/Interface/NewCommodity";
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default [
+const routesList = [
     {
         path: "/",
         element: <Welcome/>,
@@ -40,8 +41,16 @@ export default [
                         element: <Home/>
                     },
                     {
-                        path: "commodity_list",
-                        element: <CommodityList/>
+                        path: "notice",
+                        element: <Notice/>
+                    },
+                    {
+                        path: "new_commodity",
+                        element: <NewCommodity/>
+                    },
+                    {
+                        path: "",
+                        element: <Navigate to={"home"}/>
                     }
                 ]
             },
@@ -60,3 +69,4 @@ export default [
         ]
     }
 ]
+export default routesList;

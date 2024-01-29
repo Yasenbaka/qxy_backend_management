@@ -16,8 +16,10 @@ function Management(){
     useEffect(() => {checkCookie();}, [checkCookie]);
     return (
         <div>
-            <h1>这里是后台管理页，请根据导航栏选择工作</h1>
-            <Outlet/>
+            <h1>控制台：{}</h1>
+            <div>
+                <Outlet/>
+            </div>
         </div>
     )
 }
