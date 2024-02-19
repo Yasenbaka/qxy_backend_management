@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import "./index.css";
 import axios from "axios";
 
-
 function Login() {
     let [isCookieLogin, setCookieState] = useState(false);
     const checkCookie = () => {

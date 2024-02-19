@@ -1,0 +1,6 @@
+.management_container_box{
+    display: grid;
+    grid-template-columns: 15% 84%;
+    grid-gap: 1%;
+    margin: 10px auto;
+}

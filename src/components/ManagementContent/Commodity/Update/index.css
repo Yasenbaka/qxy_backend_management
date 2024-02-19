@@ -1,0 +1,17 @@
+.commodity_update_container_box{
+    padding: 10px;
+}
+.submenu_box ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.submenu_box ul li{
+    float: left;
+    margin-right: 10px;
+    list-style: none;
+}
+.submenu_box a{
+    text-decoration: none;
+    color: #282c34;
+}

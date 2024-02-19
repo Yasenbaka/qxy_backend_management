@@ -1,0 +1,23 @@
+.side_menu_box{
+    box-shadow: #00000050 0 0  5px;
+}
+.side_menu_box ul li {
+    list-style: none;
+}
+.side_menu_box a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #282c34;
+}
+.side_menu_title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #afced8;
+    margin: 30px 0 15px 0;
+}
+.side_menu_item{
+    margin-bottom: 5px;
+}
+.side_menu_item_icon{
+    margin-right: 5px;
+}

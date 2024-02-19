@@ -1,31 +1,17 @@
-import Login from "../pages/Login";
-import Welcome from "../pages/Welcome";
-import Department from "../pages/Department";
 import Management from "../pages/Management";
-import Interface from "../pages/Management/Interface";
-import Commodity from "../pages/Management/Commodity";
-import Indent from "../pages/Management/Indent";
-import User from "../pages/Management/User";
-import Home from "../pages/Management/Interface/Home";
+import Home from "../components/ManagementContent/Page/Home";
+import Notice from "../components/ManagementContent/Page/Notice";
+import Picture from "../components/ManagementContent/Page/Picture";
+import Page from "../components/ManagementContent/Page";
 import {Navigate} from "react-router-dom";
-import Notice from "../pages/Management/Interface/Notice";
-import NewCommodity from "../pages/Management/Interface/NewCommodity";
+import Commodity from "../components/ManagementContent/Commodity";
+import Update from "../components/ManagementContent/Commodity/Update";
+import Change from "../components/ManagementContent/Commodity/Change";
+import Release from "../components/ManagementContent/Commodity/Update/Release";
 
 const routesList = [
     {
         path: "/",
-        element: <Welcome/>,
-    },
-    {
-        path: "/login",
-        element: <Login/>
-    },
-    {
-        path: "/department",
-        element: <Department/>
-    },
-    {
-        path: "/recruit",
         element: <Management/>
     },
     {
@@ -33,8 +19,8 @@ const routesList = [
         element: <Management/>,
         children: [
             {
-                path: "interface",
-                element: <Interface/>,
+                path: "page/*",
+                element: <Page/>,
                 children: [
                     {
                         path: "home",
@@ -45,8 +31,8 @@ const routesList = [
                         element: <Notice/>
                     },
                     {
-                        path: "new_commodity",
-                        element: <NewCommodity/>
+                        path: "picture",
+                        element: <Picture/>
                     },
                     {
                         path: "",
@@ -55,16 +41,32 @@ const routesList = [
                 ]
             },
             {
-                path: "commodity",
-                element: <Commodity/>
-            },
-            {
-                path: "indent",
-                element: <Indent/>
-            },
-            {
-                path: "user",
-                element: <User/>
+                path: "commodity/*",
+                element: <Commodity/>,
+                children: [
+                    {
+                        path: "update",
+                        element: <Update/>,
+                        children: [
+                            {
+                                path: "release",
+                                element: <Release/>
+                            },
+                            {
+                                path: "",
+                                element: <Navigate to={"release"}/>
+                            }
+                        ]
+                    },
+                    {
+                        path: "change",
+                        element: <Change/>
+                    },
+                    {
+                        path: "",
+                        element: <Navigate to={"update"}/>
+                    }
+                ]
             }
         ]
     }

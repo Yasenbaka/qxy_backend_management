@@ -1,4 +1,4 @@
-.main-header{
+.main_header{
     position: relative;
     top: 0;
     left: 0;
@@ -10,32 +10,13 @@
     display: flex;
     align-items: center; /* 垂直居中 */
 }
-.main-header-logo{
-    left: 5%;
+.main_header_logo{
     height: 90%;
-    margin: 0 20px 0 50px;
-
 }
-.main-header-menu-box{
-    position: absolute;
-    top: 0;
-    /*top: 50%;*/
-    transform: translateY(-50%); /* 向上移动自身高度的一半 */
-    height: 100%;
-    right: 5%;
-}
-.main-header-menu::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-.main-header-menu-item{
+.main_header_item{
     float: left;
-    list-style: none;
-}
-.main-header-menu-item a{
-    font-size: 30px;
     margin-right: 20px;
-    text-decoration: none;
-    color: white;
+}
+.main_header_item_right{
+    position: relative;
 }
