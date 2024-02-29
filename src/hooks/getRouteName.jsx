@@ -1,5 +1,5 @@
 const getRouteName = (subRoute, pageName) => {
-    const mainRoute = "/management/";
+    const mainRoute = "/#management/";
     let handleRoute;
     switch (subRoute){
         case 1: {
