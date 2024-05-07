@@ -24,7 +24,7 @@ const failureStatus = (successStatus) =>
         successStatus;
 
 // code分类表示
-const codeClassify = {
+export const codeClassify = {
     BasicCommunication: {'STATUS_FIR': 10000, 'STATUS_SEC': 0},
     UserArchive: {'STATUS_FIR': 10000, 'STATUS_SEC': 100},
     BasicCommodity: {'STATUS_FIR': 10000, 'STATUS_SEC': 200},
@@ -36,7 +36,7 @@ const codeClassify = {
 // code分类选择失败的数组返回
 const codeClassifyCheckFailure = [0, '开发者选择的Code分类有错误？']
 
-class CodeStatus{
+export class CodeStatus{
     STATUS_FIR = 90000;
     STATUS_SEC = 0;
     constructor({STATUS_FIR, STATUS_SEC}) {
@@ -57,8 +57,8 @@ class CodeStatus{
     ALL_VIEW_COLOR_SUCCESS = () => this.judgeCodeClassify(codeClassify.BasicCommunication)?
         [this.calculateCode(2), '获取界面配色参数成功']: codeClassifyCheckFailure;
     ALL_VIEW_ASSETS_FAILURE = () => failureStatus(this.ALL_VIEW_ASSETS_SUCCESS());
-    ALL_VIEW_THEME_ASSETS_FAILURE = () => failureStatus(this.ALL_VIEW_THEME_ASSETS_SUCCESS);
-    ALL_VIEW_COLOR_FAILURE = () => failureStatus(this.ALL_VIEW_COLOR_SUCCESS);
+    ALL_VIEW_THEME_ASSETS_FAILURE = () => failureStatus(this.ALL_VIEW_THEME_ASSETS_SUCCESS());
+    ALL_VIEW_COLOR_FAILURE = () => failureStatus(this.ALL_VIEW_COLOR_SUCCESS());
     MISSING_KEY = () => this.judgeCodeClassify(codeClassify.BasicCommunication)?
         [this.calculateCode(3), '缺少必要的键']: codeClassifyCheckFailure;
     MISSING_VALUE = () => this.judgeCodeClassify(codeClassify.BasicCommunication)?
@@ -73,12 +73,12 @@ class CodeStatus{
         [this.calculateCode(2), '用户信息登录成功']: codeClassifyCheckFailure;
     USER_ARCHIVE_REVISE_SUCCESS = () => this.judgeCodeClassify(codeClassify.UserArchive)?
         [this.calculateCode(3), '用户信息修改成功']: codeClassifyCheckFailure;
-    USER_ARCHIVE_FAILURE = () => failureStatus(this.USER_ARCHIVE_SUCCESS);
-    USER_ARCHIVE_REGISTER_FAILURE = () => failureStatus(this.USER_ARCHIVE_REGISTER_SUCCESS);
-    USER_ARCHIVE_LOGIN_FAILURE = () => failureStatus(this.USER_ARCHIVE_LOGIN_SUCCESS);
-    USER_ARCHIVE_REVISE_FAILURE = () => failureStatus(this.USER_ARCHIVE_REVISE_SUCCESS);
+    USER_ARCHIVE_FAILURE = () => failureStatus(this.USER_ARCHIVE_SUCCESS());
+    USER_ARCHIVE_REGISTER_FAILURE = () => failureStatus(this.USER_ARCHIVE_REGISTER_SUCCESS());
+    USER_ARCHIVE_LOGIN_FAILURE = () => failureStatus(this.USER_ARCHIVE_LOGIN_SUCCESS());
+    USER_ARCHIVE_REVISE_FAILURE = () => failureStatus(this.USER_ARCHIVE_REVISE_SUCCESS());
 
 }
 
-const a = new CodeStatus(codeClassify.BasicCommunication).ALL_VIEW_THEME_ASSETS_FAILURE()
+const a = new CodeStatus(codeClassify.UserArchive).USER_ARCHIVE_REVISE_FAILURE()
 console.log(a);
